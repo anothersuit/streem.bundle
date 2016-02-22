@@ -53,6 +53,8 @@ def Media(title, rel_url, page=1):
 	url = '%s/%s&page=%d' % (Prefs['pw_site_url'], rel_url, page)
 	html = HTML.ElementFromURL(url)
 
+	Log.Add(html)
+
 	oc = ObjectContainer(title2=title)
 
 	for item in html.xpath('//div[@class="index_container"]//a[contains(@href, "/watch-")]'):
