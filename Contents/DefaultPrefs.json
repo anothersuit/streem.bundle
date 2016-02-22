@@ -4,8 +4,7 @@
 		"type": "enum",
 		"label": "Site URL",
 		"values": [
-			"http://www.primewire.ag",
-			"http://www.primewire.to"
+			"http://www.primewire.ag"
 		],
 		"default": "http://www.primewire.ag"
 	}
