@@ -14,7 +14,7 @@ def ValidatePrefs():
 	pass
 
 ####################################################################################################
-@handler('/video/lmwtkiss', TITLE)
+@handler('/video/streem', TITLE)
 def MainMenu():
 
 	oc = ObjectContainer()
@@ -26,7 +26,7 @@ def MainMenu():
 	return oc
 
 ####################################################################################################
-@route('/video/lmwtkiss/section')
+@route('/video/streem/section')
 def Section(title, type='movies'):
 
 	if type == 'tv':
@@ -47,7 +47,7 @@ def Section(title, type='movies'):
 	return oc
 
 ####################################################################################################
-@route('/video/lmwtkiss/media', page=int)
+@route('/video/streem/media', page=int)
 def Media(title, rel_url, page=1):
 
 	url = '%s/%s&page=%d' % (Prefs['pw_site_url'], rel_url, page)
@@ -95,7 +95,7 @@ def Media(title, rel_url, page=1):
 	return oc
 
 ####################################################################################################
-@route('/video/lmwtkiss/media/seasons')
+@route('/video/streem/media/seasons')
 def MediaSeasons(url, title, thumb):
 
 	if not url.startswith('http'):
@@ -116,7 +116,7 @@ def MediaSeasons(url, title, thumb):
 	return oc
 
 ####################################################################################################
-@route('/video/lmwtkiss/media/episodes')
+@route('/video/streem/media/episodes')
 def MediaEpisodes(url, title, thumb):
 
 	if not url.startswith('http'):
@@ -144,7 +144,7 @@ def MediaEpisodes(url, title, thumb):
 	return oc
 
 ####################################################################################################
-@route('/video/lmwtkiss/media/versions')
+@route('/video/streem/media/versions')
 def MediaVersions(url, title, thumb):
 
 	if not url.startswith('http'):
@@ -180,7 +180,7 @@ def MediaVersions(url, title, thumb):
 		return oc
 
 ####################################################################################################
-@route('/video/lmwtkiss/media/playback')
+@route('/video/streem/media/playback')
 def MediaPlayback(url):
 
 	oc = ObjectContainer()
@@ -189,7 +189,7 @@ def MediaPlayback(url):
 	return oc
 
 ####################################################################################################
-@route('/video/lmwtkiss/media/search')
+@route('/video/streem/media/search')
 def Search(type='movies', query=''):
 
 	if type == 'tv':
